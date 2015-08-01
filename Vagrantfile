@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
   config.vm.synced_folder "docker/", "/home/vagrant/docker"
-  for port in 49000..49900
+  for port in 49000..49300
     config.vm.network :forwarded_port, host: port, guest: port
   end
 
